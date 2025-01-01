@@ -2,7 +2,7 @@
 	import SocialIcons from '$lib/assets/socials.svg';
 </script>
 
-<footer class="overflow-x-hidden py-18 xl:flex xl:items-start">
+<footer class="py-18 xl:flex xl:items-start">
 	<div class="xl:shrink-0 xl:grow xl:basis-0">
 		<div class="xl:mr-48">
 			<div class="mb-10 typography-headline">Let's work together</div>

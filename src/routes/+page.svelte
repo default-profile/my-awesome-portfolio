@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
 	import Navbar from '$lib/Navbar.svelte';
-	import HeroImage from '$lib/assets/HeroImage.svg';
+	import HeroImage from '$lib/assets/hero.svg';
 	import ProductDesignImage from '$lib/assets/services/product-design.svg';
 	import ArtDirectionImage from '$lib/assets/services/art-direction.svg';
 	import VisualDesignImage from '$lib/assets/services/visual-deign.svg';
@@ -64,21 +64,21 @@
 
 <!-- Hero Section -->
 <header
-	class="flex h-[calc(100svh-var(--navbar-height))] min-h-175 flex-col justify-between pt-12 pb-15 md:h-auto md:min-h-auto md:flex-row md:items-center md:py-25"
+	class="flex h-[calc(100svh-var(--navbar-height))] min-h-auto flex-col items-center justify-between pt-12 pb-15 md:h-auto md:flex-row md:py-25"
 >
-	<div class="flex flex-col items-center text-center md:items-start md:text-start">
+	<div class="flex grow flex-col items-center text-center md:my-12 md:items-start md:text-start">
 		<div class="typography-body-lg text-nowrap">Branding | Image making</div>
 		<div class="mt-6 mb-5 typography-display text-nowrap md:my-10">
 			My Awesome <br /> Portfolio
 		</div>
 		<div class="typography-body-sm">
-			This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com
+			This is a template Figma file, turned into code using Anima. <br class="hidden xl:block" /> Learn more at AnimaApp.com
 		</div>
 	</div>
 	<img
 		src={HeroImage}
 		alt="Hero"
-		class="w-full md:-mr-13 md:ml-12 md:h-106 md:grow md:object-cover md:object-left xl:m-0 xl:w-auto xl:object-center"
+		class="aspect-auto grow self-stretch md:-mr-13 md:ml-12 md:object-cover md:object-left xl:m-0 xl:object-contain xl:object-center"
 	/>
 </header>
 
@@ -99,7 +99,7 @@
 
 <!-- Companies Marquee (Tablet, Desktop) -->
 <div
-	class="-mx-13 hidden flex-row items-center gap-x-33 overflow-x-hidden border-y-2 border-y-[rgba(0,0,0,.2)] px-13 py-17 md:flex"
+	class="-mx-13 hidden flex-row items-center gap-x-33 overflow-x-hidden border-y-2 border-y-[rgba(0,0,0,.2)] px-13 py-17 md:flex xl:-mx-25 xl:px-25"
 >
 	<img src={Google} alt="Google" />
 	<img src={Apple} alt="Apple" />
@@ -109,7 +109,7 @@
 </div>
 
 <!-- Products Section -->
-<section class="grid grid-cols-1 justify-items-center gap-y-32 py-38 md:grid-cols-2 md:py-45 xl:grid-cols-3">
+<section class="grid grid-cols-1 justify-items-center gap-32 py-38 md:grid-cols-2 md:py-45 xl:grid-cols-3">
 	{#each products as { image, title, description }}
 		<div class="flex w-62 flex-col items-center justify-center text-center">
 			<img src={image} alt={title} class="size-32" />
@@ -120,7 +120,7 @@
 </section>
 
 <!-- Latest Work Section -->
-<section class="py-10 md:py-5">
+<section class="pt-15 pb-23 md:pt-25 md:pb-38">
 	<div class="mb-15 text-center typography-headline">Latest Work</div>
 	<div class="grid grid-cols-1 justify-center gap-15 md:grid-cols-2 md:gap-12 xl:grid-cols-3 xl:gap-15">
 		{#each x as { image, title, subtitle }}

@@ -3,7 +3,7 @@
 </script>
 
 <header
-	class="flex h-[calc(100svh-var(--navbar-height))] min-h-180 flex-col items-center justify-between pt-12 pb-15 md:h-auto md:min-h-auto md:flex-row md:py-25"
+	class="flex h-[calc(100svh-var(--navbar-height))] min-h-180 flex-col items-center justify-between pt-12 pb-15 md:h-auto md:min-h-auto md:flex-row md:py-25 xl:h-[calc(100svh-var(--navbar-height))]"
 >
 	<div class="flex grow flex-col items-center text-center md:my-12 md:items-start md:text-start">
 		<div class="typography-body-lg text-nowrap">Branding | Image making</div>
